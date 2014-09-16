@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent" >
+
+   <TextView
+      android:id="@+id/textView1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="32dp"
+      android:text="@string/Recording"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <ImageView
+      android:id="@+id/imageView1"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_below="@+id/textView1"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="37dp"
+      android:scaleType="fitXY"
+      android:src="@android:drawable/presence_audio_online" />
+
+      
+   <Button
+       android:id="@+id/recordBackground"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/imageView1"
+       android:layout_centerHorizontal="true"
+       android:layout_centerVertical="true"
+       android:onClick="recordBackground"
+       android:text="Record Background"
+       android:textSize="14sp" />
+ 
+   <Button
+       android:id="@+id/recordAudioWithBackground"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@id/recordBackground"
+       android:layout_alignParentRight="true"
+       android:layout_below="@id/recordBackground"
+       android:layout_centerVertical="true"
+       android:onClick="recordBackgroundWithAudio"
+       android:text="Record Background With Audio"
+       android:textSize="14sp" />
+
+
+   
+   <Button
+       android:id="@+id/stopRecording"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/recordAudioWithBackground"
+       android:onClick="stop"
+       android:text="@string/stop" />
+  
+
+   <Button
+       android:id="@+id/play"
+       style="?android:attr/buttonStyleSmall"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/stopRecording"
+       android:onClick="play"
+       android:text="@string/play" />
+
+</RelativeLayout>
